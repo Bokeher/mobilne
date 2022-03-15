@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_B_free"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="free throw"
+        app:layout_constraintEnd_toEndOf="@+id/btn_B_plus2"
+        app:layout_constraintStart_toStartOf="@+id/btn_B_plus2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_B_plus2" />
+
+    <Button
+        android:id="@+id/btn_B_plus2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="+2 points"
+        app:layout_constraintEnd_toEndOf="@+id/btn_B_plus3"
+        app:layout_constraintStart_toStartOf="@+id/btn_B_plus3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_B_plus3" />
+
+    <LinearLayout
+        android:id="@+id/linLay_separator"
+        android:layout_width="1dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="287dp"
+        android:background="#B6B6B6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <TextView
+        android:id="@+id/txtView_A_teamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Team A"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/linLay_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtView_A_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtView_A_teamName"
+        app:layout_constraintStart_toStartOf="@+id/txtView_A_teamName"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_A_teamName" />
+
+    <Button
+        android:id="@+id/btn_A_plus3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="+3 points"
+        app:layout_constraintEnd_toEndOf="@+id/txtView_A_teamName"
+        app:layout_constraintStart_toStartOf="@+id/txtView_A_teamName"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_A_score" />
+
+    <Button
+        android:id="@+id/btn_A_plus2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="+2 points"
+        app:layout_constraintEnd_toEndOf="@+id/btn_A_plus3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_A_plus3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_A_plus3" />
+
+    <Button
+        android:id="@+id/btn_A_free"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="free throw"
+        app:layout_constraintEnd_toEndOf="@+id/btn_A_plus2"
+        app:layout_constraintStart_toStartOf="@+id/btn_A_plus2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_A_plus2" />
+
+    <TextView
+        android:id="@+id/txtView_B_teamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Team B"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linLay_separator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtView_B_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtView_B_teamName"
+        app:layout_constraintStart_toStartOf="@+id/txtView_B_teamName"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_B_teamName" />
+
+    <Button
+        android:id="@+id/btn_B_plus3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="+3 points"
+        app:layout_constraintEnd_toEndOf="@+id/txtView_B_teamName"
+        app:layout_constraintStart_toStartOf="@+id/txtView_B_teamName"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_B_score" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linLay_separator" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+</androidx.constraintlayout.widget.ConstraintLayout>

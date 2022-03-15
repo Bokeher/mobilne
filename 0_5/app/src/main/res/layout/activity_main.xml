@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5BD2E1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtV_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Counter"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtV_numb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Tutaj pojawi się liczba"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtV_counter" />
+
+    <Button
+        android:id="@+id/btn_addOne"
+        android:layout_width="125dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="24dp"
+        android:text="ADD ONE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtV_numb"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgV_1"
+        android:layout_width="212dp"
+        android:layout_height="209dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/img" />
+
+    <Button
+        android:id="@+id/btn_removeOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="REMOVE ONE"
+        app:layout_constraintEnd_toEndOf="@+id/btn_addOne"
+        app:layout_constraintStart_toStartOf="@+id/btn_addOne"
+        app:layout_constraintTop_toBottomOf="@+id/btn_addOne" />
+</androidx.constraintlayout.widget.ConstraintLayout>

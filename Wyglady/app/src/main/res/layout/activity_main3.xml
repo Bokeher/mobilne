@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:background="@drawable/sr_stetoskop"
+    android:backgroundTint="@android:color/darker_gray"
+    android:backgroundTintMode="multiply"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/sr2_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="122dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/sr_main2_icon" />
+
+    <TextView
+        android:id="@+id/sr2_textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Recover your password"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr2_image" />
+
+    <EditText
+        android:id="@+id/sr2_editText_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/sr_button"
+        android:backgroundTint="@color/material_on_primary_disabled"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr2_textView_text" />
+
+    <Button
+        android:id="@+id/sr2_button_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Submit"
+        android:textColor="@color/layout2_button_textColor"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/button_cornerRadius"
+        app:iconTint="@color/layout2_button_textColor"
+        app:layout_constraintEnd_toEndOf="@+id/sr2_editText_email"
+        app:layout_constraintStart_toStartOf="@+id/sr2_editText_email"
+        app:layout_constraintTop_toBottomOf="@+id/sr2_editText_email" />
+
+    <TextView
+        android:id="@+id/sr2_textView_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="Please enter your email below, we will send you a link to reset your password, make sure it's same email you used when creating your account"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr2_textView_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

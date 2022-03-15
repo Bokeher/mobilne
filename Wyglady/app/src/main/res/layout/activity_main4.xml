@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1"
+    android:background="@drawable/sr_ttgoiv"
+    android:backgroundTint="@color/fb_blue"
+    android:backgroundTintMode="multiply"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/sr3_editText_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Agent or Username"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_textView_title" />
+
+    <Button
+        android:id="@+id/sr3_button_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="@dimen/design1_alpha"
+        android:backgroundTint="#7392FF"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_editText_company" />
+
+    <TextView
+        android:id="@+id/sr3_textView_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="━━━━━━━━━━━━━━━━━ OR ━━━━━━━━━━━━━━━━━"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_button_login" />
+
+    <Button
+        android:id="@+id/sr3_button_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="@dimen/design1_alpha"
+        android:backgroundTint="#7392FF"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_textView_or" />
+
+    <Button
+        android:id="@+id/sr3_button_forgottenPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="@dimen/design1_alpha"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Forgotten Password"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/button_cornerRadius"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_button_register" />
+
+    <EditText
+        android:id="@+id/sr3_editText_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/sr3_editText_username"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sr3_editText_username"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_editText_username" />
+
+    <EditText
+        android:id="@+id/sr3_editText_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Company"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/sr3_editText_password"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="@+id/sr3_editText_password"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_editText_password" />
+
+    <TextView
+        android:id="@+id/sr3_textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sr3_imageView_logo" />
+
+    <TextView
+        android:id="@+id/sr3_textView_logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Airport Assistance"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/sr3_imageView_logo"
+        app:layout_constraintStart_toEndOf="@+id/sr3_imageView_logo"
+        app:layout_constraintTop_toTopOf="@+id/sr3_imageView_logo" />
+
+    <ImageView
+        android:id="@+id/sr3_imageView_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/layout2_button_textColor"
+        android:tint="@color/layout2_button_textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sr_airplane" />
+
+    <Button
+        android:id="@+id/sr3_button_soft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Soft"
+        android:textColor="@color/layout2_button_textColor"
+        app:cornerRadius="@dimen/button_cornerRadius"
+        app:icon="@android:drawable/ic_dialog_info"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/layout2_button_textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

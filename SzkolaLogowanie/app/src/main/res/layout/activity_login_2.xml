@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".ui.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/txtV_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/convert_currency"
+        android:textColor="@color/defaultTextValue"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/USD_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtV_currency"
+        app:layout_constraintTop_toBottomOf="@+id/txtV_currency" />
+
+    <TextView
+        android:id="@+id/txtV_USD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="USD"
+        android:textColor="@color/defaultTextValue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/USD_value"
+        app:layout_constraintStart_toEndOf="@+id/USD_value" />
+
+    <TextView
+        android:id="@+id/txtV_converts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/converts"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/USD_value"
+        app:layout_constraintTop_toBottomOf="@+id/USD_value" />
+
+    <EditText
+        android:id="@+id/EUR_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="textPersonName"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="@+id/USD_value"
+        app:layout_constraintTop_toBottomOf="@+id/txtV_converts" />
+
+    <TextView
+        android:id="@+id/txtV_EUR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="EUR"
+        android:textColor="@color/defaultTextValue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/EUR_value"
+        app:layout_constraintStart_toEndOf="@+id/EUR_value" />
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="80dp"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/convert"
+        android:textColor="@color/button_fontColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EUR_value" />
+
+    <Button
+        android:id="@+id/btn_changeCurrency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="80dp"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/change_currency"
+        android:textColor="@color/button_fontColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_convert" />
+</androidx.constraintlayout.widget.ConstraintLayout>
