@@ -1,15 +1,12 @@
 package com.example.kolkokrzyzyk;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
-
-import java.sql.SQLOutput;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     Button btn_7;
     Button btn_8;
     Button btn_9;
+    Resources res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        res = getResources();
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);
@@ -77,34 +76,22 @@ public class MainActivity extends AppCompatActivity {
         t[2][1] = mapSignToInt(btn_8);
         t[2][2] = mapSignToInt(btn_9);
 
-        System.out.println(t[0][0]);
-        System.out.println(t[0][1]);
-        System.out.println(t[0][2]);
-        System.out.println(t[1][0]);
-        System.out.println(t[1][1]);
-        System.out.println(t[1][2]);
-        System.out.println(t[2][0]);
-        System.out.println(t[2][1]);
-        System.out.println(t[2][2]);
-
-        int sum=0;
+        int sum;
 
         // horizontal _
         for(int i = 0; i < 3; i++) {
             sum = t[i][0] + t[i][1] + t[i][2];
-            System.out.println("_: "+sum);
             if(sum == 3) return 1;
             else if(sum == 6) return 2;
         }
-        System.out.println(1);
+
         // vertical |
         for(int i = 0; i < 3; i++) {
             sum = t[0][i] + t[1][i] + t[2][i];
-            System.out.println("|: "+sum);
             if(sum == 3) return 1;
             else if(sum == 6) return 2;
         }
-        System.out.println(2);
+
         // diagonal / \
         sum = t[2][0] + t[1][1] + t[0][2];
         if(sum == 3) return 1;
@@ -114,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         if(sum == 3) return 1;
         else if(sum == 6) return 2;
 
-        System.out.println(3);
         //draw
         int draw = 0;
         for(int i = 0; i < 3; i++) {
@@ -130,20 +116,16 @@ public class MainActivity extends AppCompatActivity {
 
         if(result == 1) {
             addPoints(true);
-            winner = "Wygrał gracz 1";
-        }
-        else if(result == 2) {
+            winner = res.getString(R.string.player1_won);
+        } else if(result == 2) {
             addPoints(false);
-            winner = "Wygrał gracz 2";
-        }
-        else winner = "Remis";
+            winner = res.getString(R.string.player2_won);
+        } else winner = res.getString(R.string.draw);
 
         AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
         dlgAlert.setMessage(winner);
-        dlgAlert.setTitle("Koniec gry");
-        dlgAlert.setPositiveButton("Ok", (dialog, which) -> {
-            clearBoard();
-        });
+        dlgAlert.setTitle(res.getString(R.string.game_over));
+        dlgAlert.setPositiveButton("Ok", (dialog, which) -> clearBoard()); // potential error {}
         dlgAlert.setCancelable(false);
         dlgAlert.create().show();
     }
@@ -174,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
         sign = !sign;
 
         TextView txtView_currentMove = findViewById(R.id.txtView_currentMove);
-        if(sign) txtView_currentMove.setText("Ruch gracza 1 (X)");
-        else txtView_currentMove.setText("Ruch gracza 2 (O)");
+        if(sign) txtView_currentMove.setText(res.getString(R.string.player1_move));
+        else txtView_currentMove.setText(res.getString(R.string.player2_move));
     }
 
     private String getSign() {

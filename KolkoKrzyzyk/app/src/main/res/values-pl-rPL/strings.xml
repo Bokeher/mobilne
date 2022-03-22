@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KolkoKrzyzyk</string>
+    <string name="player1_move">Ruch gracza 1</string>
+    <string name="player2_move">Ruch gracza 2</string>
+    <string name="score">Wynik</string>
+    <string name="player1">Gracz 1</string>
+    <string name="player2">Gracz 2</string>
+    <string name="player1_won">Gracz 1 wygrał</string>
+    <string name="player2_won">Gracz 2 wygrał</string>
+    <string name="draw">Remis</string>
+    <string name="game_over">Gra skończona</string>
+    <string name="reset">Reset</string>
+    <string name="default_score">0</string>
+</resources>
