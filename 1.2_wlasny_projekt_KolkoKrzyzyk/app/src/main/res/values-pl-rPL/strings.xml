@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">KolkoKrzyzyk</string>
-    <string name="player1_move">Ruch gracza 1</string>
-    <string name="player2_move">Ruch gracza 2</string>
+    <string name="player1_move">Ruch gracza 1 (X)</string>
+    <string name="player2_move">Ruch gracza 2 (O)</string>
     <string name="score">Wynik</string>
     <string name="player1">Gracz 1</string>
     <string name="player2">Gracz 2</string>

@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         btn_8 = findViewById(R.id.btn_8);
         btn_9 = findViewById(R.id.btn_9);
 
-
         btn_1.setOnClickListener(view -> move(btn_1));
         btn_2.setOnClickListener(view -> move(btn_2));
         btn_3.setOnClickListener(view -> move(btn_3));
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void move(Button btn) {
-        if(btn.getText().equals("")) {
+        if(btn.getText().equals("") && !gameOver) {
             btn.setText(getSign());
             changeSign();
             int state = checkMap();
@@ -112,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void endGame(int result) {
+        gameOver = true;
         String winner;
 
         if(result == 1) {
@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
         btn_8.setText("");
         btn_9.setText("");
 
+        gameOver = false;
         if(!sign) changeSign();
-
     }
 
     private int mapSignToInt(Button btn) {
@@ -191,5 +191,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // true - X | false - O
+    private boolean gameOver = false;
     private boolean sign = true;
 }
